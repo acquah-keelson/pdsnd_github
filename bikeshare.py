@@ -3,12 +3,14 @@ import time
 import numpy as np
 import pandas as pd
 
+# city data
 CITY_DATA = {
     'chicago': 'chicago.csv',
     'new york city': 'new_york_city.csv',
     'washington': 'washington.csv'
 }
 
+# months covered
 MONTHS = ['january', 'february', 'march', 'april', 'may', 'june']
 MONTHS_WITH_ALL = [
     'january', 'february', 'march', 'april', 'may', 'june', 'all'
@@ -75,7 +77,7 @@ interested in ? (january, february, ... june or all)').lower()
     print('-' * 40)
     return city, month, day
 
-
+# load data by city month and data
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month
