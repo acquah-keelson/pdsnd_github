@@ -1,15 +1,10 @@
 ### Date created
-Include the date you created this project and README file.
+December 2019
 
 ### Project Title
-Replace the Project Title
+BikeShare
 
 ### Description
-Describe what your project is about and what it does
+Bikeshare is a python program which gives useful information on the descriptive statistics of bike rental usage in three cities with an interactive experience  where users can unlock or return bikes
 
-### Files used
-Include the files used
-
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+ 
