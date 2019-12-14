@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 
 # city data
+
 CITY_DATA = {
     'chicago': 'chicago.csv',
     'new york city': 'new_york_city.csv',
@@ -11,6 +12,7 @@ CITY_DATA = {
 }
 
 # months covered
+
 MONTHS = ['january', 'february', 'march', 'april', 'may', 'june']
 MONTHS_WITH_ALL = [
     'january', 'february', 'march', 'april', 'may', 'june', 'all'
@@ -78,7 +80,7 @@ interested in ? (january, february, ... june or all)').lower()
     return city, month, day
 
 # load data by city month and data
-def load_data(city, month, day):
+def load_city_data(city, month, day):
     """
     Loads data for the specified city and filters by month
     and day if applicable.
@@ -99,6 +101,7 @@ def load_data(city, month, day):
     df['day_of_week'] = df['Start Time'].dt.weekday_name
 
     # filter by month
+
     if month != 'all':
         # use the index of the months list to get the corresponding int
         months = MONTHS
@@ -108,6 +111,7 @@ def load_data(city, month, day):
         df = df[df['month'] == month]
 
     # filter by day
+
     if day != 'all':
         # filter by day of week to create the new dataframe
         df = df[df['day_of_week'] == day.title()]
@@ -241,7 +245,7 @@ def display_raw_data(df):
 def main():
     while True:
         city, month, day = get_filters()
-        df = load_data(city, month, day)
+        df = load_city_data(city, month, day)
 
         display_raw_data(df)
 
